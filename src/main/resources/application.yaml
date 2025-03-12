@@ -13,14 +13,12 @@ spring:
         format_sql: true
         show_sql: true
     show-sql: true
-
-langchain4j:
-  open-ai:
-    chat-model:
-      api-key: ''
-      model-name: gpt-4o
-      log-requests: true
-      log-responses: true
+  ai:
+    openai:
+        api-key: ''
+        chat:
+          options:
+            model: gpt-4o
 
 clients:
   weather:
@@ -29,6 +27,5 @@ clients:
 
 logging:
   level:
-    dev:
-      langchain4j: DEBUG
-      ai4j.openai4j: DEBUG
+    org.springframework.ai: TRACE
+    org.springframework.ai.openai: TRACE

@@ -1,19 +1,19 @@
 package me.bbebawe.booking_agent.tools;
 
-import dev.langchain4j.agent.tool.Tool;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.ai.tool.annotation.Tool;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClient;
 
 @Component
-@RequiredArgsConstructor
 @Slf4j
 public class WeatherTool {
 
-    private final RestClient weatherClient;
+    @Autowired
+    private RestClient weatherClient;
 
-    @Tool(name = "Get_City_Weather", value = "Get Weather details for a given city")
+    @Tool(description = "Get Weather details for a given city")
     public String getWeather(String city) {
         log.info("Getting Weather: {}", city);
         return weatherClient.get()

@@ -1,8 +1,8 @@
 package me.bbebawe.booking_agent.tools;
 
 
-import dev.langchain4j.agent.tool.Tool;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
@@ -11,8 +11,7 @@ import java.time.LocalDateTime;
 @Slf4j
 public class DateTimeTool {
 
-
-    @Tool(name = "Get_Current_DateTime", value = "Get Current Date and Time")
+    @Tool(description = "Get Current Date and Time")
     public LocalDateTime getCurrentDateTime() {
         log.info("Getting Current Date and Time");
         return LocalDateTime.now();
