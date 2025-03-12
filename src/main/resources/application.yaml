@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: booking-agent
+  config:
+    import: optional:secrets-dev.yaml # provides application secrets (passwords, keys, etc)
+  datasource:
+    url: ''
+    username: ''
+    password: ''
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+    show-sql: true
+
+langchain4j:
+  open-ai:
+    chat-model:
+      api-key: ''
+      model-name: gpt-4o
+      log-requests: true
+      log-responses: true
+
+clients:
+  weather:
+    base-url: https://api.weatherapi.com/v1
+    api-key: ''
+
+logging:
+  level:
+    dev:
+      langchain4j: DEBUG
+      ai4j.openai4j: DEBUG
