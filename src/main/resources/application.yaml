@@ -19,7 +19,15 @@ spring:
         chat:
           options:
             model: gpt-4o
-
+    mcp:
+      client:
+        enabled: true
+        name: mcp-servers
+        version: 1.0.0
+        request-timeout: 30s
+        type: SYNC
+        stdio:
+          servers-configuration: classpath:mcp-servers-config.json
 clients:
   weather:
     base-url: https://api.weatherapi.com/v1

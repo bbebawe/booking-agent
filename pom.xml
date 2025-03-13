@@ -62,6 +62,10 @@
 			<artifactId>spring-ai-openai-spring-boot-starter</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>org.springframework.ai</groupId>
+			<artifactId>spring-ai-mcp-client-spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>

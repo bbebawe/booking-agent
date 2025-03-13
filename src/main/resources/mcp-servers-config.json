@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "C:\\Users\\b.bebawe\\AppData\\Roaming\\npm\\npx.cmd",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:\\Users\\b.bebawe"
+      ]
+    },
+    "serverTime": {
+      "command": "python",
+      "args": [
+        "-m",
+        "mcp_server_time",
+        "--local-timezone=Europe/London"
+      ]
+    }
+  }
+}
