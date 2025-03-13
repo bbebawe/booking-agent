@@ -17,7 +17,7 @@ public class BookingRepository {
 
 
     @PersistenceContext
-    private EntityManager entityManager;
+    private final EntityManager entityManager;
 
     public List<Booking> queryBooking(String sqlQuery) {
         List<Booking> result = entityManager.createQuery(sqlQuery, Booking.class).getResultList();

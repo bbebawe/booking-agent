@@ -1,20 +1,20 @@
 package me.bbebawe.booking_agent.tools;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import me.bbebawe.booking_agent.entity.Booking;
 import me.bbebawe.booking_agent.service.BookingService;
 import org.springframework.ai.tool.annotation.Tool;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 @Component
+@RequiredArgsConstructor
 @Slf4j
 public class BookingTool {
 
-    @Autowired
-    private BookingService bookingService;
+    private final BookingService bookingService;
 
     @Tool(description = "Get Booking Details from Database using SQL statement from user input")
     public List<Booking> getBookingDetails(String sqlQuery) {
