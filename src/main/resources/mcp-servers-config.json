@@ -15,6 +15,17 @@
         "mcp_server_time",
         "--local-timezone=Europe/London"
       ]
+    },
+    "jdbc": {
+      "command": "C:\\Users\\b.bebawe\\.jbang\\bin\\jbang.cmd",
+      "args": [
+        "jdbc@quarkiverse/quarkus-mcp-servers",
+        "jdbc:postgresql://localhost:5432/SPRING_DEMOS_DB?currentSchema=ai_demo",
+        "-u",
+        "developer",
+        "-p",
+        "developer"
+      ]
     }
   }
 }
