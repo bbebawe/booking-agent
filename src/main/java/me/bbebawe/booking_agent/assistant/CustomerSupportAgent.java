@@ -10,12 +10,13 @@ import org.springframework.stereotype.Component;
 public class CustomerSupportAgent {
 
     private final ChatClient chatClient;
+    private static final String AGENT_NAME = "agentName";
+    private static final String AGENT_NAME_VALUE = "BookingAgent";
 
     public String chat(String message) {
         return chatClient.prompt()
-                .system(sp -> sp.param("agentName", "GlueAgent"))
+                .system(sp -> sp.param(AGENT_NAME, AGENT_NAME_VALUE))
                 .user(message)
                 .call().content();
     }
-
 }

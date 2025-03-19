@@ -12,12 +12,13 @@ import org.springframework.web.client.RestClient;
 public class WeatherTool {
 
     private final RestClient weatherClient;
+    private static final String CURRENT_WEATHER_URI = "/current.json?q=";
 
     @Tool(description = "Get Weather details for a given city")
     public String getWeather(String city) {
-        log.info("Getting Weather: {}", city);
+        log.info("Getting Weather for: {}", city);
         return weatherClient.get()
-                .uri("/current.json?q=" + city)
+                .uri(CURRENT_WEATHER_URI + city)
                 .retrieve()
                 .body(String.class);
     }

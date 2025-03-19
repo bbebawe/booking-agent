@@ -2,17 +2,13 @@ spring:
   application:
     name: booking-agent
   config:
-    import: optional:secrets-dev.yaml # provides application secrets (passwords, keys, etc)
+    import: optional:secrets-dev.yaml
   ai:
     openai:
-        api-key: ''
-        chat:
-          options:
-            model: gpt-4o
-#    ollama:
-#      chat:
-#        options:
-#          model: llama3.2:1b
+      api-key: ''
+      chat:
+        options:
+          model: gpt-4o
     mcp:
       client:
         enabled: true
@@ -23,12 +19,12 @@ spring:
         stdio:
           servers-configuration: classpath:mcp-servers-config.json
     vectorstore:
-     chroma:
-       initialize-schema: true
-       collection-name: booking-agent
-       client:
-         host: http://localhost
-         port: 8000
+      chroma:
+        initialize-schema: true
+        collection-name: booking-agent
+        client:
+          host: http://localhost
+          port: 8000
 
 clients:
   weather:

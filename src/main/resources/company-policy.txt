@@ -1,3 +1,5 @@
-Customers may cancel their booking up to 14 days before the scheduled date to receive a full refund.
+For Refundable Bookings customers may cancel their booking up to 14 days before the scheduled date to receive a full refund.
 Cancellations made after this period will not be eligible for a refund.
 Refund payment will be processed in 10 days with a 2% fee deducted when using Amex Credit Cards
+
+For Non-Refundable customers can not cancel their booking once booking is made and will not be eligible for a refund

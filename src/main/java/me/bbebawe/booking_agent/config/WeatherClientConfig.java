@@ -10,15 +10,15 @@ public class WeatherClientConfig {
 
     @Value("${clients.weather.base-url}")
     private String baseUrl;
-
     @Value("${clients.weather.api-key}")
     private String apiKey;
+    private static final String KEY = "key";
 
     @Bean
     public RestClient weatherClient() {
         return RestClient.builder()
                 .baseUrl(baseUrl)
-                .defaultHeader("key", apiKey)
+                .defaultHeader(KEY, apiKey)
                 .build();
     }
 }
