@@ -17,6 +17,8 @@ public class CustomerSupportAgent {
         return chatClient.prompt()
                 .system(sp -> sp.param(AGENT_NAME, AGENT_NAME_VALUE))
                 .user(message)
-                .call().content();
+                .call()
+                .content();
     }
+
 }
