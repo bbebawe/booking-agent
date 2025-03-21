@@ -35,7 +35,7 @@ public class ChatClientConfig {
 
         List<ToolCallback> toolCallbacks = new ArrayList<>();
 
-        // add MCP tools
+        // add MCP Servers
         toolCallbacks.addAll(McpToolUtils.getToolCallbacksFromSyncClients(mcpClients));
         // add Spring AI Tools
         toolCallbacks.addAll(List.of(ToolCallbacks.from(weatherTool)));
